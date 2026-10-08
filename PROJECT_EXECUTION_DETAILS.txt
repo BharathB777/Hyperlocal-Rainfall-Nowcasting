@@ -1,0 +1,102 @@
+================================================================================
+PROJECT DETAILS & EXECUTION INSTRUCTIONS
+Project Title: Hyperlocal Rainfall Nowcasting System
+Student Name: Bharath B
+GitHub Profile: https://github.com/BharathB777
+================================================================================
+
+1. GITHUB REPOSITORY LINK:
+--------------------------------------------------------------------------------
+https://github.com/BharathB777/Hyperlocal-Rainfall-Nowcasting
+
+
+2. SYSTEM REQUIREMENTS & PREREQUISITES:
+--------------------------------------------------------------------------------
+- Python 3.10 or higher (Python 3.11 recommended)
+- Node.js (v18.x or higher) and npm
+- Git
+
+
+3. STEPS HOW TO EXECUTE THE PROJECT:
+--------------------------------------------------------------------------------
+
+STEP 1: CLONE THE REPOSITORY
+-----------------------------
+Open your terminal (Command Prompt, PowerShell, or Bash) and clone the repository:
+   git clone https://github.com/BharathB777/Hyperlocal-Rainfall-Nowcasting.git
+   cd Hyperlocal-Rainfall-Nowcasting
+
+
+STEP 2: BACKEND SETUP & EXECUTION (FastAPI Server)
+--------------------------------------------------
+1. Navigate to the backend directory:
+   cd backend
+
+2. Create and activate a Python virtual environment:
+   # On Windows (PowerShell or Command Prompt):
+   python -m venv venv
+   .\venv\Scripts\activate
+
+   # On Linux / macOS:
+   python3 -m venv venv
+   source venv/bin/activate
+
+3. Install required Python packages:
+   pip install -r requirements.txt
+
+4. Create the local environment configuration file:
+   # On Windows:
+   copy .env.example .env
+
+   # On Linux / macOS:
+   cp .env.example .env
+
+5. Start the FastAPI backend server:
+   uvicorn main:app --reload --port 8000
+
+6. The backend server is now running at:
+   - Backend Base URL: http://localhost:8000
+   - Interactive Swagger API Documentation: http://localhost:8000/docs
+   - API Health Endpoint: http://localhost:8000/api/health
+
+
+STEP 3: FRONTEND SETUP & EXECUTION (Next.js Meteorological Dashboard)
+--------------------------------------------------------------------
+Open a NEW terminal window (keep the backend server running in the first terminal):
+
+1. Navigate to the web application directory:
+   cd web-app
+
+2. Install Node.js dependencies:
+   npm install
+
+3. Launch the Next.js development server:
+   npm run dev
+
+4. Open your browser and navigate to:
+   http://localhost:3000
+
+   You will see the real-time meteorological dashboard, interactive station
+   readings, rainfall trend graphs, and radar/nowcast maps.
+
+
+STEP 4: MACHINE LEARNING PIPELINE / MODEL VERIFICATION (Optional)
+-----------------------------------------------------------------
+To evaluate and verify the deep learning nowcasting models (LSTM-ATU-Net,
+Spatio-Temporal Transformer, and precipitation-weighted loss functions):
+
+1. Navigate to the ML pipeline source directory:
+   cd ml-pipeline/src
+
+2. Ensure PyTorch, NumPy, and SciPy are installed in your Python environment:
+   pip install torch numpy scipy
+
+3. Run the model verification and sanity checks:
+   python verify_models.py
+
+   This will execute forward passes through both deep learning models and
+   compute meteorological evaluation metrics (CSI, ETS, FAR, POD).
+
+================================================================================
+End of Instructions
+================================================================================
