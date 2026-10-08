@@ -1,0 +1,1126 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "name": "Multi-Source AI for Hyperlocal Rainfall Nowcasting Knowledge Graph",
+    "version": "2.0.0",
+    "generated_tool": "Graphify",
+    "repository": "d:/FYP-1",
+    "project_title": "Multi-Source AI for Hyperlocal Rainfall Nowcasting",
+    "phase": "Phase 1 Completed / Phase 2 Planned",
+    "academic_degree": "Bachelor of Technology (B.Tech) - Computer Science and Engineering",
+    "institution": "Sri Manakula Vinayagar Engineering College (SMVEC), Madagadipet, Puducherry - 605107",
+    "affiliation": "Pondicherry University",
+    "academic_year": "2026-2027 (Review & Submission: October 2026)",
+    "team_members": [
+      {
+        "name": "Ariyan M",
+        "register_no": "23UCS015",
+        "role": "Full-Stack Architecture & Data Ingestion"
+      },
+      {
+        "name": "Bharath B",
+        "register_no": "23UCS025",
+        "role": "Deep Learning Pipeline & Model Design"
+      },
+      {
+        "name": "Hemnnath G",
+        "register_no": "23UCS066",
+        "role": "Feature Engineering & Frontend Dashboard"
+      }
+    ],
+    "project_guide": "Dr. N. Danapaquiame (Professor and Head of the Department, CSE, SMVEC)",
+    "director_principal": "Dr. V. S. K. Venkatachalapathy",
+    "chairman_md": "Shri. M. Dhanasekaran",
+    "description": "Exhaustive full-stack AI and meteorological knowledge graph combining multi-source data ingestion (IMD AWS, Ambient PWS, Open-Meteo), deep learning precipitation nowcasting (LSTMAtU-Net base paper + proposed TransAtU-Net extension with ECSA attention), multi-model NWP blend guidance, 15 implementation steps, empirical evaluation benchmarks, and an interactive Next.js dashboard."
+  },
+  "nodes": [
+    {
+      "id": "project_academic_meta",
+      "label": "Project Academic Profile & Team Credentials",
+      "type": "academic_profile",
+      "community": 0,
+      "community_name": "Project Overview & Academic Profile",
+      "summary": "Official academic metadata for B.Tech CSE Final Year Project at SMVEC Puducherry.",
+      "body": "# Project Academic Profile\n- **Project Title**: Multi-Source AI for Hyperlocal Rainfall Nowcasting\n- **Phase**: Project Report — Phase 1 Completed / Phase 2 Planned\n- **Degree**: Bachelor of Technology (B.Tech) in Computer Science and Engineering\n- **Department**: Department of Computer Science and Engineering\n- **Institution**: Sri Manakula Vinayagar Engineering College (SMVEC), Madagadipet, Puducherry - 605107\n- **Affiliation**: Affiliated to Pondicherry University\n- **Academic Year**: 2026–2027 (Review & Submission: October 2026)\n\n## Student Project Team\n1. **Ariyan M** — Register No.: 23UCS015 (CSE)\n2. **Bharath B** — Register No.: 23UCS025 (CSE)\n3. **Hemnnath G** — Register No.: 23UCS066 (CSE)\n\n## Project Guide & Leadership\n- **Project Guide & HOD**: Dr. N. Danapaquiame, Professor and Head of the Department, CSE, SMVEC.\n- **Director cum Principal**: Dr. V. S. K. Venkatachalapathy\n- **Chairman & Managing Director**: Shri. M. Dhanasekaran\n- **Secretary**: Dr. K. Narayanasamy\n- **Treasurer**: Shri. D. Rajarajan\n- **Joint Secretary**: Shri. S. Velayudham\n\n## Project Abstract\nRainfall forecasting plays an indispensable role in agriculture, transportation, disaster management, and urban flooding prevention. However, conventional Numerical Weather Prediction (NWP) models operate on coarse spatial (10–25 km) and temporal (6–12 h) resolutions, failing to capture rapid localized convective rain events (0–3 hour nowcasting). This project builds a unified weather intelligence platform that:\n1. Ingests heterogeneous real-time observations from IMD AWS, community Personal Weather Stations (PWS), and Open-Meteo.\n2. Cleans, aligns, and persists data into an asynchronous database.\n3. Engineers predictive thermodynamic features (pressure trends, humidity gradients, dew point spread).\n4. Implements state-of-the-art deep learning models: base paper **LSTMAtU-Net** (Sensors 2023) and proposed **TransAtU-Net** (Spatio-Temporal Transformer) for 0–2h and 0–3h quantitative precipitation nowcasting.\n5. Replicates the ChennaiRains multi-model rainfall blend (ECMWF, GFS, ICON, NCUM, AI) across 20 districts.\n6. Delivers a responsive, dark-mode Next.js 16 web dashboard with live telemetry and interactive charts.",
+      "norm_label": "project academic profile & team credentials",
+      "file_path": "Bharath B - FYP Report.docx",
+      "metadata": {
+        "degree": "B.Tech CSE",
+        "college": "Sri Manakula Vinayagar Engineering College",
+        "university": "Pondicherry University",
+        "submission_date": "October 2026"
+      }
+    },
+    {
+      "id": "po_pso_curriculum_mapping",
+      "label": "NBA Program Outcomes (PO1-PO12) & PSO Mapping",
+      "type": "academic_curriculum",
+      "community": 0,
+      "community_name": "Project Overview & Academic Profile",
+      "summary": "Detailed mapping of project components to NBA Program Outcomes and Program Specific Outcomes.",
+      "body": "# Program Outcomes (PO) and PSO Mapping\n\n- **PO1 (Engineering Knowledge)**: Applied meteorological thermodynamics (Magnus-Tetens dew point spread, barometric tendencies), signal processing, and deep learning neural architectures.\n- **PO2 (Problem Analysis)**: Formulated the technical gap of coarse NWP models (10-25 km) during Northeast Monsoon convective flash downpours in coastal Tamil Nadu and Puducherry.\n- **PO3 (Design/Development of Solutions)**: Designed an end-to-end full-stack weather intelligence platform: asynchronous FastAPI backend, APScheduler ingestion engine, PyTorch ML models, and Next.js 16 web app.\n- **PO4 (Conduct Investigations of Complex Problems)**: Benchmarked ConvLSTM, LSTMAtU-Net, and TransAtU-Net models using meteorological metrics (CSI, POD, FAR, HSS) under severe class imbalance.\n- **PO5 (Modern Tool Usage)**: PyTorch, FastAPI, Next.js 16, React 19, Tailwind CSS v4, SQLAlchemy Async, Recharts, Leaflet, SQLite, Git, Docker.\n- **PO6 (The Engineer and Society)**: Early warning system for urban flooding, traffic disruptions, and squalls in Chennai, Puducherry, and Cuddalore.\n- **PO7 (Environment and Sustainability)**: Microclimate tracking for agriculture, water resource conservation, and climate resilience in the Puducherry-Auroville coastal biosphere.\n- **PO8 (Ethics)**: Open-source community station attribution, data privacy, and ethical disaster intelligence dissemination.\n- **PO9 (Individual and Team Work)**: Collaborative division of responsibilities across full-stack backend, deep learning modeling, and frontend UI design.\n- **PO10 (Communication)**: Project documentation, technical PPT reviews, viva defense, and interactive web visualization.\n- **PO11 (Project Management and Finance)**: Open-source zero-cost infrastructure deployment using free APIs, local edge compute, and SQLite/PostgreSQL.\n- **PO12 (Life-long Learning)**: Keeping pace with advanced AI research (transforming from ConvLSTM to Spatio-Temporal Transformers).\n- **PSO1 (Software Development)**: Production-grade asynchronous REST APIs, real-time data streaming, and reactive frontend dashboards.\n- **PSO2 (Data Science & Intelligent Systems)**: Time-series feature engineering, multi-source data fusion, and meteorological nowcasting algorithms.",
+      "norm_label": "nba program outcomes (po1-po12) & pso mapping",
+      "file_path": "Multi_Source_AI_PO_PSO_Mapping.pdf"
+    },
+    {
+      "id": "system_specifications_hardware_software",
+      "label": "System Requirements & Hardware/Software Specifications (Chapter 4)",
+      "type": "system_specifications",
+      "community": 0,
+      "community_name": "Project Overview & Academic Profile",
+      "summary": "Complete hardware, software, runtime, and dependency requirements from Chapter 4 of the project report.",
+      "body": "# System Requirements (Chapter 4)\n\n## Software Requirements:\n- **Operating System**: Windows 10/11 (Development) / Ubuntu 22.04 LTS Linux (Production Deployment).\n- **Languages**: Python 3.11–3.13 (Backend & ML) | TypeScript 5.0+ / JavaScript ES2024 (Frontend).\n- **Frontend Framework**: Next.js 16.3.1 (App Router, Turbopack) | React 19.2.8.\n- **Styling & UI**: Tailwind CSS v4 | Lucide React | Recharts 3.10.1 (Data Visualization) | Leaflet (Planned GIS).\n- **Backend Framework**: FastAPI 0.120.2 | Uvicorn 0.52.3 (ASGI) | Pydantic 2.12.3 & pydantic-settings.\n- **Task Scheduling**: APScheduler 3.10+ (AsyncIOScheduler running in-process).\n- **Database Layer**: SQLite 3 (via aiosqlite 0.20+) for local dev | PostgreSQL 16 + TimescaleDB (Production) | SQLAlchemy 2.0.52 (Async ORM).\n- **Machine Learning & Deep Learning**: PyTorch 2.7.1 | torchvision | scikit-learn 1.7.2 | XGBoost 3.2.0 | NumPy 2.2.6 | Pandas 2.3.1.\n- **NWP & Meteorological GIS**: xarray 2025.7.1 | cfgrib | rasterio | Cartopy 0.24.1 | Matplotlib 3.10.3 | netCDF4 1.7.2.\n- **HTTP Client**: HTTPX 0.28.1 (Asynchronous REST API queries).\n- **Authentication (Phase 2)**: NextAuth.js | Firebase Authentication (Google & Facebook OAuth).\n\n## Hardware Requirements:\n- **Processor**: Intel Core i5/i7 (8th Gen+) or AMD Ryzen 5/7 (6+ physical cores).\n- **RAM**: Minimum 16 GB DDR4/DDR5 (for loading multidimensional NWP arrays and training batches).\n- **Storage**: Minimum 50 GB SSD storage (for SQLite/TimescaleDB time-series and model checkpoints).\n- **GPU (ML Training)**: NVIDIA GeForce RTX 3060 / 4060 (6GB+ VRAM) or Google Colab / Kaggle T4/A100 GPUs for deep learning training.",
+      "norm_label": "system requirements & hardware/software specifications (chapter 4)",
+      "file_path": "Bharath B - FYP Report.docx"
+    },
+    {
+      "id": "problem_statement_and_motivation",
+      "label": "Problem Statement & Meteorological Challenges",
+      "type": "problem_analysis",
+      "community": 1,
+      "community_name": "Problem Statement & Literature Survey",
+      "summary": "Detailed problem statement: coarse NWP models, rapid convective storms, and data silos.",
+      "body": "# Problem Statement & Research Motivation\n\n## 1. Coarse Spatial & Temporal Resolution in Standard NWP\n- Global Numerical Weather Prediction (NWP) models (e.g., GFS at ~25 km, ECMWF IFS at ~9 km) update only every 6 to 12 hours.\n- In coastal Tamil Nadu and Puducherry, intense rain cells during the Northeast Monsoon (NEM) can form, intensify, and dump >50 mm of rain within 30 to 90 minutes over a small radius of 3 to 10 km.\n- Standard NWP completely misses these micro-scale convective flash floods.\n\n## 2. High Risk of Urban Inundation and Disaster Vulnerability\n- Low-lying coastal cities (Puducherry, Chennai, Cuddalore) experience severe waterlogging that impacts transit, power supply, and livelihoods.\n- Authorities and citizens lack access to hyperlocal 0–2h and 0–3h quantitative precipitation nowcasts (QPF).\n\n## 3. Data Fragmentation Across Meteorological Silos\n- Existing weather platforms are fragmented:\n  - **IMD Mausam**: High-quality official data, but limited automated public APIs and sparse station coverage in semi-urban belts.\n  - **Personal Weather Stations (PWS) (Ambient Weather, Weather Underground)**: Dense community IoT stations measuring hyper-local temperature, pressure, and rain, but lacking predictive AI nowcasting.\n  - **Global NWP Portals (Windy, RainViewer)**: High-level visual maps without localized ground-truth calibration or deep learning nowcast models.\n\n## 4. The Research Objective\nDevelop a low-cost, multi-source weather data fusion platform that combines dense ground IoT sensors, numerical forecasts, and deep learning attention models for real-time hyperlocal precipitation nowcasting.",
+      "norm_label": "problem statement & meteorological challenges",
+      "file_path": "Project brief.md"
+    },
+    {
+      "id": "literature_survey_benchmark",
+      "label": "Literature Survey Master Table (16 Papers)",
+      "type": "literature_review",
+      "community": 1,
+      "community_name": "Problem Statement & Literature Survey",
+      "summary": "Exhaustive literature survey table synthesizing all 16 papers from Chapter 2 and the project library.",
+      "body": "# Literature Survey: Complete 16 Papers Matrix\n\n| S.No | Paper Title | Authors | Year | Venue | Key Contribution | Disadvantage / Research Gap Addressed |\n|---|---|---|---|---|---|---|\n| 1 | **ConvLSTM Network: A Machine Learning Approach for Precipitation Nowcasting** | Xingjian Shi et al. | 2015 | NeurIPS / arXiv | Replaces FC-LSTM with convolutional gates in input-to-state and state-to-state transitions. | Blurs severely at >60 min due to MSE; ignores ground IoT sensor readings. |\n| 2 | **Deep Learning for Precipitation Nowcasting: A Benchmark and a New Model** | Xingjian Shi et al. | 2017 | NeurIPS | Introduces Trajectory GRU (TrajGRU) to learn location-variant dynamic recurrent connections. | High computational complexity; radar-centric without IoT fusion. |\n| 3 | **Precipitation Nowcasting: Leveraging Bidirectional LSTM and 1D CNN** | Patel, Patel & Ghosh | 2018 | arXiv | Combines 1D CNN feature extractors with BiLSTM for temporal atmospheric dependency. | Single-station focus; does not capture spatial relationships across sensor networks. |\n| 4 | **LSTMAtU-Net: A Precipitation Nowcasting Model Based on ECSA Module (BASE PAPER)** | Xiaoping Geng, Chen Zhang et al. | 2023 | Sensors (MDPI) | U-Net with Depthwise Separable Convolutions (DSC), Vertical Flow ConvLSTM, ECSA Attention, and TLoss. | Parameter cut by 41.86%, but ConvLSTM experiences memory decay at lead times >90 min. Authors explicitly proposed Transformer as future work. |\n| 5 | **ConvLSTM Network-Based Rainfall Nowcasting with Combined Reflectance and Wind** | Wang et al. | 2022 | Atmosphere | Dual-input ConvLSTM using Doppler radar reflectance and retrieved horizontal wind fields. | Highly dependent on Doppler Weather Radar; lacks PWS ground calibration. |\n| 6 | **Two-Stream Convolutional LSTM for Precipitation Nowcasting** | Recent studies | 2022 | Neural Computing & Appl. | Two parallel streams processing spatial radar intensity and velocity fields separately. | Large memory footprint; challenging to deploy on lightweight edge servers. |\n| 7 | **A Data-Driven Approach for High Accurate Spatiotemporal Precipitation Estimation** | Recent studies | 2024 | Neural Computing & Appl. | GNN encoder-decoder with multimodal fusion modeling station spatial relationships. | Requires predefined graph topologies and struggles with dynamic station dropouts. |\n| 8 | **Automated Predictive Analytics for Localized Rainfall** | Weather AI Team | 2022 | IEEE Access | Automated feature engineering on barometric pressure and humidity tendencies. | Relies solely on tabular tree ensembles without learning spatiotemporal motion. |\n| 9 | **Skilful Precipitation Nowcasting Using Deep Generative Models of Radar (DGMR)** | Suman Ravuri et al. | 2021 | Nature (DeepMind) | Generative adversarial network with spatial and temporal discriminators producing sharp radar fields. | Extreme computational cost (TPU clusters); unsuitable for sparse IoT deployment. |\n| 10 | **ECMWF Short-Term Numerical Weather Prediction Downscaling** | European Centre | 2023 | QJRMS | Statistical and machine learning downscaling of ECMWF global GRIB2 forecasts to local stations. | 6-hour forecast latency makes it incapable of 0–60 minute convective nowcasting. |\n| 11 | **A Structured Graph Neural Network for Improving NWP (GIPMN)** | Climate ML Group | 2024 | AI for Earth | Combines numerical physical equations with GNN spatial station graphs. | Heavy alignment complexity between gridded NWP and irregular station points. |\n| 12 | **Data-Driven Global Precipitation Estimation from Satellite Imagery** | Remote Sensing Lab | 2021 | IEEE TGRS | Infrared and microwave geostationary satellite imagery to estimate surface precipitation. | Coarse spatial resolution (4–10 km); satellite parallax errors in coastal zones. |\n| 13 | **ConvCast: Convolutional Nowcasting over Radar Grids** | Radar Tech Group | 2023 | Weather & Forecasting | Multi-layer 3D convolutional nowcaster forecasting radar reflectivity cubes. | Misses surface thermodynamic parameters (dew point, relative humidity). |\n| 14 | **Predicting Rainfall Using Machine Learning & Deep Learning Ensembles** | Applied ML Lab | 2023 | Springer | Benchmarked Random Forest, XGBoost, and LightGBM against basic LSTM on tabular data. | Lack of spatial awareness and unable to generate 2D forecast maps. |\n| 15 | **Short-Term Precipitation Forecasting with Attention U-Net** | Vision ML Group | 2022 | Remote Sensing | Standard spatial attention gates on U-Net skip connections. | Collapses channels using global pooling, losing channel-specific moisture signals. |\n| 16 | **Enhancing Weather Radar Nowcasting with Multi-Task Loss Functions** | Meteorological AI | 2024 | J. Hydrometeorology | Combines balanced MSE with focal cross-entropy to handle heavy rainfall class imbalance. | Solves loss imbalance but retains blurry recurrent architectures. |",
+      "norm_label": "literature survey master table (16 papers)",
+      "file_path": "Bharath B - FYP Report.docx"
+    },
+    {
+      "id": "base_paper_deep_dive",
+      "label": "Base Paper Deep Dive: LSTMAtU-Net (Sensors 2023)",
+      "type": "scientific_foundation",
+      "community": 1,
+      "community_name": "Problem Statement & Literature Survey",
+      "summary": "Exhaustive analysis of the base paper LSTMAtU-Net: DSC, ECSA module, ConvLSTM-VF, and TLoss.",
+      "body": "# Base Paper: LSTMAtU-Net (Sensors 2023)\n- **Title**: LSTMAtU-Net: A Precipitation Nowcasting Model Based on ECSA Module\n- **Authors**: Xiaoping Geng, Chen Zhang, Yujie Wang, et al.\n- **Journal**: *Sensors* 2023, 23(13), 5785. DOI: [10.3390/s23135785](https://doi.org/10.3390/s23135785).\n\n## Four Foundational Innovations:\n1. **Depthwise Separable Convolutions (DSC)**:\n   - Decomposes standard 2D convolution into depthwise (per-channel spatial filtering) and pointwise (1x1 cross-channel linear combination).\n   - Reduces parameter count from 32,024,420 (standard U-Net) to **18,619,421** (41.86% parameter reduction).\n   - Dramatically lowers inference latency, enabling rapid nowcast cycles.\n\n2. **Efficient Channel and Space Attention (ECSA) Module**:\n   - Standard ECA modules use Global Average Pooling (GAP) which reduces the spatial dimensions to 1x1, obliterating crucial spatial rain cell boundaries.\n   - ECSA replaces GAP with multi-scale **Adaptive Average Pooling (AAP)** of scale $R \\times R$ ($R \\in \\{16, 8, 4, 2, 1\\}$ matched to U-Net encoder levels), followed by 1D convolution ($k=3$) along the channel axis.\n   - Retains multi-scale spatial topology while adaptively weighting key moisture and velocity channels.\n\n3. **Vertical Flow ConvLSTM (ConvLSTM-VF)**:\n   - Rotates the traditional temporal ConvLSTM 90° clockwise.\n   - Memory $M^l$ and hidden representation $H^l$ flow **vertically** across network abstraction layers $l$, establishing rich hierarchical representations between multi-scale U-Net encoder-decoder stages.\n\n4. **Multi-Objective Weighted Loss (TLoss)**:\n   - Directly tackles extreme class imbalance (90%+ dry periods).\n   - Combines Weighted MSE ($\\text{WMSE}$) with multi-threshold soft Binary Cross-Entropy ($\\text{BCE}_p$) at meteorological thresholds $p \\in \\{0.05, 0.5, 1.0\\}\\text{ mm}$.\n   - Exponential weighting factor: $w(y) = e^{0.6y} - 0.8$, penalizing severe rainfall prediction misses heavily.",
+      "norm_label": "base paper deep dive: lstmatu-net (sensors 2023)",
+      "file_path": "ml-pipeline/src/lstmatu_net.py"
+    },
+    {
+      "id": "proposed_transatunet_novelty",
+      "label": "Proposed Novel Extension: TransAtU-Net Architecture",
+      "type": "scientific_novelty",
+      "community": 1,
+      "community_name": "Problem Statement & Literature Survey",
+      "summary": "Novel contribution of this FYP: Fulfilling base paper's future research direction via Spatio-Temporal Transformers.",
+      "body": "# Proposed Novel Extension: TransAtU-Net Architecture\n\n## Scientific Motivation (Direct Quote from Base Paper)\nIn Section 5 of Geng et al. (*Sensors 2023*), the authors explicitly state:\n> *\"Therefore, our future research will focus on the Transformer architecture and the weighted loss function to improve the precipitation nowcasting accuracy.\"*\n\nOur Final Year Project directly answers and implements this research challenge.\n\n## Core Architectural Enhancements in TransAtU-Net:\n1. **Spatio-Temporal Multi-Head Self-Attention (ST-MHSA) Bottleneck**:\n   - Replaces the sequential, recurrent ConvLSTM cell with full self-attention across flattened space and time tokens.\n   - **Solves the Recurrent Blur Problem**: Standard recurrent cells (LSTM/GRU) suffer from vanishing gradients and error accumulation as lead time progresses to 90–120 minutes. Transformer attention provides direct $O(1)$ token interaction across all lead-time horizons.\n   - Captures non-local meteorological interactions between convective cloud clusters across distant districts simultaneously.\n\n2. **ECSA on Multi-Scale Skip Connections**:\n   - Retains the ECSA module on U-Net skip connections to preserve localized gradient sharpness and rain contour boundaries.\n\n3. **Multi-Lead Temporal Positional Encodings**:\n   - Injects explicit sinusoidal temporal embeddings for forecast horizons (+15m, +30m, +45m, +60m, +90m, +120m).\n\n4. **Enhanced Focal Weighted Loss**:\n   - Extends TLoss by incorporating focal modulating factors $(1 - p_t)^\\gamma$ to prevent overwhelming gradients from easy non-rain samples, while retaining severe rainfall threshold penalties.",
+      "norm_label": "proposed novel extension: transatu-net architecture",
+      "file_path": "ml-pipeline/src/transformer_nowcast.py"
+    },
+    {
+      "id": "math_ecsa_formulation",
+      "label": "Mathematical Formulation: ECSA Module",
+      "type": "mathematical_formula",
+      "community": 2,
+      "community_name": "Mathematical Formulations & DL Theory",
+      "summary": "Detailed equations and tensor dimensions for Efficient Channel and Space Attention.",
+      "body": "# Efficient Channel and Space Attention (ECSA) Formulation\n\n## Governing Formula:\n$$\\tilde{X} = \\sigma\\left(\\text{Conv1D}_{k=3}\\left(\\text{Mean}_{R \\times R}\\left(\\text{AAP}(X, R)\\right)\\right)\\right) \\odot X$$\n\n## Execution Steps:\n1. **Adaptive Average Pooling (AAP)**:\n   - Input: $X \\in \\mathbb{R}^{B \\times C \\times H \\times W}$\n   - Pooling to scale $R \\times R$: $X_{\\text{pooled}} = \\text{AAP}(X, (R, R)) \\in \\mathbb{R}^{B \\times C \\times R \\times R}$\n   - Where $R \\in \\{16, 8, 4, 2, 1\\}$ corresponds to each hierarchical level of the U-Net.\n2. **Spatial Descriptor Compression**:\n   - Average across the $R \\times R$ grid:\n   - $s_c = \\frac{1}{R^2} \\sum_{i=1}^R \\sum_{j=1}^R X_{\\text{pooled}}(c, i, j) \\in \\mathbb{R}^{B \\times C}$\n3. **1D Channel Convolution**:\n   - Reshape to $\\mathbb{R}^{B \\times 1 \\times C}$\n   - Compute fast 1D convolution with kernel size $k=3$ (odd kernel preserving cross-channel local interaction without dimensionality reduction):\n   - $\\omega = \\sigma\\left(\\text{Conv1D}_{k=3}(s)\\right) \\in \\mathbb{R}^{B \\times 1 \\times C}$\n4. **Channel-Spatial Calibration**:\n   - Reshape $\\omega$ to $\\mathbb{R}^{B \\times C \\times 1 \\times 1}$ and element-wise multiply with original feature map $X$:\n   - $\\tilde{X} = X \\odot \\omega$",
+      "norm_label": "mathematical formulation: ecsa module",
+      "file_path": "ml-pipeline/src/ecsa.py"
+    },
+    {
+      "id": "math_dsc_convolutions",
+      "label": "Mathematical Formulation: Depthwise Separable Convolutions",
+      "type": "mathematical_formula",
+      "community": 2,
+      "community_name": "Mathematical Formulations & DL Theory",
+      "summary": "Mathematical comparison of standard 2D convolution vs Depthwise Separable Convolutions.",
+      "body": "# Depthwise Separable Convolutions (DSC)\n\n## Parameter & FLOP Comparison:\nLet $D_K \\times D_K$ be kernel spatial size ($3 \\times 3$), $D_F \\times D_F$ be feature map dimensions, $M$ be input channels, and $N$ be output channels.\n\n### Standard 2D Convolution:\n- Computational cost: $D_K \\cdot D_K \\cdot M \\cdot N \\cdot D_F \\cdot D_F$\n- Number of parameters: $D_K^2 \\cdot M \\cdot N$\n\n### Depthwise Separable Convolution:\n1. **Depthwise Convolution** (Spatial filtering per channel):\n   - Cost: $D_K \\cdot D_K \\cdot M \\cdot D_F \\cdot D_F$\n   - Parameters: $D_K^2 \\cdot M$\n2. **Pointwise Convolution** (1x1 Linear channel projection):\n   - Cost: $M \\cdot N \\cdot D_F \\cdot D_F$\n   - Parameters: $M \\cdot N$\n\n### Theoretical Reduction Ratio:\n$$\\text{Reduction} = \\frac{D_K^2 \\cdot M + M \\cdot N}{D_K^2 \\cdot M \\cdot N} = \\frac{1}{N} + \\frac{1}{D_K^2} \\approx \\frac{1}{9} \\approx 11.1\\% \\text{ of standard FLOPs}$$\nIn the full U-Net architecture, this translates to a **41.86% reduction in total parameters** (from 32,024,420 down to 18,619,421), enabling sub-20ms inference latency on modern GPUs.",
+      "norm_label": "mathematical formulation: depthwise separable convolutions",
+      "file_path": "ml-pipeline/src/lstmatu_net.py"
+    },
+    {
+      "id": "math_loss_functions",
+      "label": "Mathematical Formulation: Multi-Objective TLoss & Focal Loss",
+      "type": "mathematical_formula",
+      "community": 2,
+      "community_name": "Mathematical Formulations & DL Theory",
+      "summary": "Formulation of TLoss (WMSE + multi-threshold soft BCE) and the Enhanced Focal Weighted Loss.",
+      "body": "# Precipitation Loss Functions\n\n## 1. Base Paper TLoss (Equation 5)\n$$L_{\\text{TLoss}} = \\text{WMSE} + 0.5 \\sum_{p \\in \\{0.05, 0.5, 1.0\\}} \\text{BCE}_p$$\n\n### A. Weighted Mean-Squared Error (WMSE)\n$$\\text{WMSE} = \\frac{1}{N} \\sum_{i=1}^N \\left(y_i - \\hat{y}_i\\right)^2 \\cdot w(y_i)$$\nWhere the exponential sample weighting function is defined as:\n$$w(y) = e^{0.6 \\cdot y} - 0.8$$\n- For dry conditions ($y = 0\\text{ mm}$): $w(0) = e^0 - 0.8 = 0.2$ (low penalty).\n- For moderate rain ($y = 2\\text{ mm}$): $w(2) = e^{1.2} - 0.8 \\approx 2.52$ (high penalty).\n- For heavy rain ($y = 5\\text{ mm}$): $w(5) = e^{3.0} - 0.8 \\approx 19.29$ (massive penalty).\n\n### B. Multi-Threshold Soft Binary Cross-Entropy (BCE_p)\nTo directly optimize the Critical Success Index (CSI) at meteorologically critical thresholds:\n$$\\hat{y}_{i, p} = \\sigma\\left(\\hat{y}_i - p\\right)$$\n$$y'_{i, p} = \\mathbb{I}(y_i \\ge p)$$\n$$\\text{BCE}_p = -\\frac{1}{N} \\sum_{i=1}^N \\left[ y'_{i, p} \\log(\\hat{y}_{i, p} + \\epsilon) + (1 - y'_{i, p}) \\log(1 - \\hat{y}_{i, p} + \\epsilon) \\right]$$\nThresholds evaluated:\n- $p_1 = 0.05\\text{ mm}$ (rain occurrence boundary)\n- $p_2 = 0.50\\text{ mm}$ (light-to-moderate threshold)\n- $p_3 = 1.00\\text{ mm}$ (heavy downpour threshold)\n\n## 2. Enhanced Focal Weighted Loss (Proposed)\n$$L_{\\text{Focal}} = \\text{WMSE} + \\sum_{p} \\alpha_p \\left(1 - \\hat{y}_{i, p}\\right)^\\gamma \\text{BCE}_p$$\nFocuses backpropagation on hard convective storm transitions while dynamically suppressing gradient noise from clear-sky background pixels.",
+      "norm_label": "mathematical formulation: multi-objective tloss & focal loss",
+      "file_path": "ml-pipeline/src/loss.py"
+    },
+    {
+      "id": "math_meteorological_metrics",
+      "label": "Meteorological Evaluation Metrics (CSI, POD, FAR, HSS)",
+      "type": "mathematical_formula",
+      "community": 2,
+      "community_name": "Mathematical Formulations & DL Theory",
+      "summary": "Standard contingency table evaluation metrics for Quantitative Precipitation Forecasting.",
+      "body": "# Meteorological Evaluation Metrics\n\nQuantitative Precipitation Forecasting (QPF) cannot be evaluated using $R^2$ or standard accuracy due to extreme class imbalance. The World Meteorological Organization (WMO) and base paper specify:\n\n## 1. Contingency Table Definitions\nGiven a rainfall threshold $\\tau$ (e.g. $0.05, 0.2, 0.5, 1.0\\text{ mm}$):\n- **TP (Hits)**: Prediction $\\ge \\tau$ AND Observed $\\ge \\tau$\n- **FP (False Alarms)**: Prediction $\\ge \\tau$ AND Observed $< \\tau$\n- **FN (Misses)**: Prediction $< \\tau$ AND Observed $\\ge \\tau$\n- **TN (Correct Negatives)**: Prediction $< \\tau$ AND Observed $< \\tau$\n\n## 2. Key Formulae\n- **Critical Success Index (CSI / Threat Score)**:\n  $$\\text{CSI} = \\frac{\\text{TP}}{\\text{TP} + \\text{FP} + \\text{FN}}$$\n  Measures the fraction of observed and predicted rain events that were correctly forecasted. Best: 1.0, Worst: 0.0.\n\n- **Probability of Detection (POD / Hit Rate)**:\n  $$\\text{POD} = \\frac{\\text{TP}}{\\text{TP} + \\text{FN}}$$\n  Measures what fraction of actual rainfall was successfully caught.\n\n- **False Alarm Rate (FAR)**:\n  $$\\text{FAR} = \\frac{\\text{FP}}{\\text{TP} + \\text{FP}}$$\n  Measures what fraction of rain alarms were false.\n\n- **Heidke Skill Score (HSS)**:\n  $$\\text{HSS} = \\frac{2(\\text{TP} \\cdot \\text{TN} - \\text{FP} \\cdot \\text{FN})}{(\\text{TP} + \\text{FN})(\\text{FN} + \\text{TN}) + (\\text{TP} + \\text{FP})(\\text{FP} + \\text{TN})}$$\n  Measures accuracy relative to random chance. Range: $-\\infty$ to 1.0 ($>0$ indicates skill).\n\n- **Continuous Metrics**: Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) in millimeters.",
+      "norm_label": "meteorological evaluation metrics (csi, pod, far, hss)",
+      "file_path": "ml-pipeline/src/metrics.py"
+    },
+    {
+      "id": "implementation_15_steps_lifecycle",
+      "label": "15-Step End-to-End Implementation Methodology (Chapter 6.1)",
+      "type": "implementation_methodology",
+      "community": 3,
+      "community_name": "Implementation Lifecycle & Results",
+      "summary": "Complete 15-step engineering methodology documented in Chapter 6 of the project report.",
+      "body": "# 15-Step Implementation Methodology (Chapter 6.1)\n\n1. **Step 1: Project Environment Setup**: Python 3.13, Node 20+, PyTorch 2.7, FastAPI, Next.js 16.\n2. **Step 2: Backend Application Development**: Asynchronous FastAPI core with Uvicorn ASGI server.\n3. **Step 3: Integration of Weather Data Sources**: Connecting IMD AWS, Ambient PWS, and Open-Meteo.\n4. **Step 4: Automated Data Acquisition**: APScheduler background runner polling at 60s intervals.\n5. **Step 5: Data Storage Layer**: SQLAlchemy Async ORM with aiosqlite weather.db.\n6. **Step 6: Data Cleaning & Validation**: Handling missing sensor values, out-of-range sensor spikes.\n7. **Step 7: Timestamp Alignment & Fusion**: Rounding observations to nearest 10-minute intervals and merging.\n8. **Step 8: Feature Engineering**: Barometric drop rates ($\\Delta P_{1h}, \\Delta P_{3h}$), humidity gradients, dew point spread.\n9. **Step 9: AI/ML Model Development**: PyTorch neural network construction (DSC, ECSA, ST-MHSA).\n10. **Step 10: Rainfall Nowcasting Engine**: Multi-horizon (+15m to +120m) inference service.\n11. **Step 11: ECMWF NWP Data Processing**: Parsing GRIB2 files with xarray and cfgrib for 1–10 day context.\n12. **Step 12: REST API Development**: Exposing 13 endpoints with Pydantic serialization.\n13. **Step 13: Web Application Development**: Responsive dark-mode dashboard in Next.js 16 with Recharts.\n14. **Step 14: Frontend-Backend Integration**: Asynchronous API client fetching telemetry and forecasts.\n15. **Step 15: System Testing & Performance Verification**: End-to-end load testing, deduplication verification, API latency benchmarking.",
+      "norm_label": "15-step end-to-end implementation methodology (chapter 6.1)",
+      "file_path": "Bharath B - FYP Report.docx"
+    },
+    {
+      "id": "empirical_evaluation_results",
+      "label": "Phase 1 Empirical Results & Performance Matrix (Table 6.1 & 6.2)",
+      "type": "empirical_results",
+      "community": 3,
+      "community_name": "Implementation Lifecycle & Results",
+      "summary": "Empirical evaluation results: 43-day continuous data collection, volume by source, and API latency benchmarks.",
+      "body": "# Phase 1 Empirical Results & Performance Matrix\n\n## 1. 43-Day Continuous Data Acquisition Campaign:\n- **Evaluation Period**: 12 August 2026 to 24 September 2026 (43 continuous days).\n- **Ingestion Frequency**: 60 seconds (APScheduler).\n- **Data Volume by Source (Table 6.1)**:\n  - **Open-Meteo Adapter**: 1,780 readings across 10 virtual grid points in Tamil Nadu/Puducherry.\n  - **Ambient / PWS Adapter**: 1,334 real physical readings across 6 Personal Weather Stations in Puducherry/Auroville.\n  - **Total Real Ingested Telemetry**: > 3,114 verified readings during evaluation campaign.\n\n## 2. API Endpoint Latency Benchmarks (Table 6.2):\n| API Endpoint | HTTP Method | Functionality | Measured Avg Latency |\n|---|---|---|---|\n| `/api/overview` | `GET` | Dashboard system-wide statistics | **18.4 ms** |\n| `/api/stations` | `GET` | All active stations with latest reading | **34.7 ms** |\n| `/api/readings/latest` | `GET` | Latest single reading per station | **27.2 ms** |\n| `/api/stations/{id}/readings` | `GET` | 24-hour time-series historical curve | **~38–45 ms** |\n| `/api/nowcast/latest` | `GET` | Latest nowcast predictions | **< 5 ms** |\n\n## 3. Physical Telemetry Verification (Figure 6.3):\n- 48-hour continuous telemetry plot on **Sarvamangalam PWS (IAUROV10, Auroville)** verified physical diurnal cycles:\n  - Mid-afternoon temperature peak corresponding cleanly to relative humidity troughs.\n  - Barometric pressure drops ($> 1.2\\text{ hPa/hr}$) reliably preceded rain peaks, confirming high predictive utility for Phase 2 DL models.",
+      "norm_label": "phase 1 empirical results & performance matrix (table 6.1 & 6.2)",
+      "file_path": "Bharath B - FYP Report.docx"
+    },
+    {
+      "id": "backend_main_service",
+      "label": "FastAPI Backend Main Service (main.py)",
+      "type": "backend_service",
+      "community": 4,
+      "community_name": "Backend Architecture & API Services",
+      "summary": "Application entry point, lifespan management, APScheduler initialization, and root landing page.",
+      "body": "# FastAPI Backend Main Service (`backend/main.py`)\n\n## Core Responsibilities:\n1. **Application Lifespan Context Manager**:\n   - `create_tables()`: Automatically generates SQLite/Postgres tables on startup.\n   - `backfill_history()`: Performs asynchronous 24–48h historical data backfill on startup so graphs immediately render continuous curves.\n   - `run_ingestion()`: Executes immediate live telemetry sync.\n   - Schedules high-frequency periodic ingestion job via `AsyncIOScheduler` every 30 to 60 seconds.\n2. **CORS Middleware**: Fully configured for cross-origin requests from the Next.js frontend (`localhost:3000`).\n3. **Service Landing Root Endpoint (`GET /`)**: Custom dark-themed HTML landing page displaying system status, server port (8000), and links to `/docs` and the web frontend.\n4. **Health Check Endpoint (`GET /health`)**: JSON liveness endpoint for Docker container probes.",
+      "norm_label": "fastapi backend main service (main.py)",
+      "file_path": "backend/main.py"
+    },
+    {
+      "id": "backend_config_service",
+      "label": "Configuration & Environment Management (config.py)",
+      "type": "backend_config",
+      "community": 4,
+      "community_name": "Backend Architecture & API Services",
+      "summary": "Pydantic Settings loading environment variables with production fallbacks.",
+      "body": "# Configuration Management (`backend/config.py`)\n\nManages typed configuration using `pydantic-settings`:\n- `DATABASE_URL`: Defaults to `sqlite+aiosqlite:///./weather.db` for local dev; easily switched to PostgreSQL for production.\n- `INGESTION_INTERVAL_SECONDS`: Periodic scheduler interval (default: 60s, configurable down to 30s).\n- `OPEN_METEO_BASE_URL`: Base URL for Open-Meteo REST queries (`https://api.open-meteo.com/v1/forecast`).\n- `AMBIENT_API_KEY` & `AMBIENT_APP_KEY`: Credentials for querying Ambient Weather Network / Weather Underground PWS.\n- `IMD_API_TOKEN`: India Meteorological Department API token (for future expansion).\n- `ENABLE_NOWCAST_SYNTHESIS`: Flag controlling on-the-fly deep learning synthetic fallback predictions.",
+      "norm_label": "configuration & environment management (config.py)",
+      "file_path": "backend/config.py"
+    },
+    {
+      "id": "backend_database_engine",
+      "label": "Asynchronous Database Engine (database.py)",
+      "type": "backend_database",
+      "community": 4,
+      "community_name": "Backend Architecture & API Services",
+      "summary": "SQLAlchemy 2.0 Async engine with aiosqlite and async sessionmaker.",
+      "body": "# Asynchronous Database Engine (`backend/database.py`)\n\n## Technical Architecture:\n- Built with SQLAlchemy 2.0 asynchronous execution pattern.\n- Uses `create_async_engine()` paired with `async_sessionmaker(expire_on_commit=False)`.\n- Implements `get_db()` async generator dependency injected into FastAPI routers:\n  ```python\n  async def get_db() -> AsyncGenerator[AsyncSession, None]:\n      async with AsyncSessionLocal() as session:\n          yield session\n  ```\n- `create_tables()` initializes all ORM declarative tables asynchronously on startup.",
+      "norm_label": "asynchronous database engine (database.py)",
+      "file_path": "backend/database.py"
+    },
+    {
+      "id": "backend_orm_models",
+      "label": "SQLAlchemy ORM Data Models (models.py)",
+      "type": "database_models",
+      "community": 4,
+      "community_name": "Backend Architecture & API Services",
+      "summary": "Relational ORM models: Station, WeatherReading, and NowcastPrediction.",
+      "body": "# SQLAlchemy ORM Models (`backend/models.py`)\n\n1. **`Station` Table**:\n   - `id`: Integer Primary Key\n   - `station_id`: String (Unique, Indexed)\n   - `name`: String (Station name)\n   - `source`: String (`'ambient-pws'`, `'open-meteo'`, `'imd'`)\n   - `lat`, `lon`: Floats (Geographic coordinates)\n   - `city`, `state`: Strings (Territory / District)\n   - `is_active`: Integer (Status flag)\n\n2. **`WeatherReading` Table**:\n   - `id`: Integer Primary Key\n   - `station_id`: String (Foreign Key, Indexed)\n   - `timestamp`: DateTime (UTC, Indexed)\n   - `temp_c`, `humidity_pct`, `pressure_hpa`, `rainfall_mm`, `wind_speed_kmh`, `wind_direction_deg`: Floats\n   - `raw_data`: Text (Raw JSON payload)\n\n3. **`NowcastPrediction` Table**:\n   - `id`: Integer Primary Key\n   - `station_id`: String (Indexed)\n   - `generated_at`: DateTime (UTC)\n   - `valid_for`: DateTime (UTC)\n   - `rain_probability`: Float (0.0 to 1.0)\n   - `rain_intensity_mm`: Float\n   - `model_version`: String (`'transatunet-v1.0'`, `'lstmatunet-v1.0'`)",
+      "norm_label": "sqlalchemy orm data models (models.py)",
+      "file_path": "backend/models.py"
+    },
+    {
+      "id": "backend_schemas_validation",
+      "label": "Pydantic Schemas & API Serializers (schemas.py)",
+      "type": "backend_schemas",
+      "community": 4,
+      "community_name": "Backend Architecture & API Services",
+      "summary": "Strict request/response Pydantic schemas validating API payloads.",
+      "body": "# Pydantic Schemas (`backend/schemas.py`)\n\n- `WeatherReadingBase` & `WeatherReadingOut`: Serializes temperature, humidity, pressure, rainfall, timestamps.\n- `StationBase` & `StationOut`: Encapsulates station metadata and embeds its latest `WeatherReadingOut`.\n- `NowcastPredictionOut`: Formats model lead times, probability, and estimated precipitation.\n- `DashboardOverview`: Encapsulates total active stations, reading counts, and network-wide atmospheric averages.",
+      "norm_label": "pydantic schemas & api serializers (schemas.py)",
+      "file_path": "backend/schemas.py"
+    },
+    {
+      "id": "backend_ingestion_engine",
+      "label": "Scheduled Ingestion & Deduplication Service (ingestion.py)",
+      "type": "backend_ingestion",
+      "community": 4,
+      "community_name": "Backend Architecture & API Services",
+      "summary": "Asynchronous scheduled ingestion engine with deduplication and startup historical backfill.",
+      "body": "# Scheduled Ingestion Engine (`backend/ingestion.py`)\n\n## Core Functions:\n1. `run_ingestion()`:\n   - Queries all registered active adapters (`AmbientWeatherAdapter`, `OpenMeteoAdapter`).\n   - Gathers readings concurrently via `asyncio.gather()`.\n   - Checks `_reading_exists(station_id, timestamp)` before each insert to prevent duplicates.\n   - Bulk commits new readings and updates station active timestamps.\n2. `backfill_history(hours=48)`:\n   - Triggered on server startup.\n   - Fetches up to 48 hours of continuous hourly observations from adapters.\n   - Ensures that when examiners open the frontend, 24h trend charts are immediately populated with continuous historical lines.",
+      "norm_label": "scheduled ingestion & deduplication service (ingestion.py)",
+      "file_path": "backend/ingestion.py"
+    },
+    {
+      "id": "backend_weather_router",
+      "label": "Weather API Router & Endpoints (routers/weather.py)",
+      "type": "api_router",
+      "community": 4,
+      "community_name": "Backend Architecture & API Services",
+      "summary": "FastAPI router exposing 13 REST endpoints for telemetry, AI nowcasts, and NWP blends.",
+      "body": "# Weather API Router (`backend/routers/weather.py`)\n\nA 26KB core API router exposing:\n- `GET /api/overview`: Dashboard summary statistics.\n- `GET /api/stations`: All stations with latest reading attached.\n- `GET /api/stations/{id}`: Single station details.\n- `GET /api/stations/{id}/readings?hours=24`: Time-series readings for trend graphs.\n- `GET /api/readings/latest`: Latest readings across all stations.\n- `GET /api/nowcast/models`: Architectural specifications and benchmark CSI/POD scores of TransAtU-Net, LSTMAtU-Net, and ConvLSTM.\n- `GET /api/nowcast/architecture-info`: Deep dive details into ECSA, DSC, and ST-MHSA.\n- `GET /api/nowcast/predict`: Multi-horizon nowcast predictions (+15m, +30m, +45m, +60m, +90m, +120m).\n- `GET /api/nowcast/latest`: Latest nowcast predictions.\n- `GET /api/forecast/rainfall-blend`: 24-hour multi-model weighted rainfall accumulation across 20 districts based on ECMWF, GFS, ICON, NCUM, and AI.",
+      "norm_label": "weather api router & endpoints (routers/weather.py)",
+      "file_path": "backend/routers/weather.py"
+    },
+    {
+      "id": "adapter_base_interface",
+      "label": "WeatherAdapter Abstract Base Class (adapters/__init__.py)",
+      "type": "adapter_pattern",
+      "community": 5,
+      "community_name": "Data Adapters & Weather Station Network",
+      "summary": "Source-agnostic adapter interface ensuring vendor-neutral data acquisition.",
+      "body": "# Adapter Architecture (`backend/adapters/__init__.py`)\n\nDefines the `WeatherAdapter` abstract class and `WeatherDataPoint` dataclass:\n```python\nclass WeatherAdapter(ABC):\n    @property\n    @abstractmethod\n    def source_name(self) -> str: ...\n    @abstractmethod\n    def is_available(self) -> bool: ...\n    @abstractmethod\n    async def fetch_readings(self) -> List[WeatherDataPoint]: ...\n    @abstractmethod\n    async def fetch_history(self, hours: int = 24) -> List[WeatherDataPoint]: ...\n```\nDecouples backend logic from vendor APIs, allowing transparent addition of radar grids, satellite feeds, or custom IoT microcontrollers.",
+      "norm_label": "weatheradapter abstract base class (adapters/__init__.py)",
+      "file_path": "backend/adapters/__init__.py"
+    },
+    {
+      "id": "adapter_ambient_pws",
+      "label": "Ambient Weather / PWS Adapter (adapters/ambient.py)",
+      "type": "iot_adapter",
+      "community": 5,
+      "community_name": "Data Adapters & Weather Station Network",
+      "summary": "Integration with 6 real live community Personal Weather Stations in Puducherry and Auroville.",
+      "body": "# Real PWS Network Adapter (`backend/adapters/ambient.py`)\n\nConnects to 6 active community IoT stations around Puducherry and Auroville:\n1. `IAUROV10` — Sarvamangalam PWS (Auroville / Irumbai): Farm microclimate, convective boundary layer. Lat: `11.98282`, Lon: `79.80799`.\n2. `IAUROV11` — Auro Orchard PWS (Auroville / Orchard): Agro-forestry canopy, high soil moisture. Lat: `11.98770`, Lon: `79.79365`.\n3. `IPONDI9` — Heritage Town PWS (Puducherry / White Town): Coastal urban heritage zone. Lat: `11.93600`, Lon: `79.83300`.\n4. `IPONDI13` — Marie Oulgaret PWS (Puducherry / Oulgaret): High-density suburban zone. Lat: `11.92868`, Lon: `79.78241`.\n5. `IAUROV6` — Bommayapalayam PWS (Auroville / Coastal): Coastal cliff overlooking Bay of Bengal. Lat: `11.99030`, Lon: `79.84118`.\n6. `IAUROV12` — Auroville Central PWS (Matrimandir Area): Central plateau microclimate. Lat: `11.99250`, Lon: `79.80500`.",
+      "norm_label": "ambient weather / pws adapter (adapters/ambient.py)",
+      "file_path": "backend/adapters/ambient.py"
+    },
+    {
+      "id": "adapter_openmeteo",
+      "label": "Open-Meteo Regional Adapter (adapters/openmeteo.py)",
+      "type": "api_adapter",
+      "community": 5,
+      "community_name": "Data Adapters & Weather Station Network",
+      "summary": "Free high-reliability REST API adapter monitoring 10 Tamil Nadu & Puducherry urban hubs.",
+      "body": "# Open-Meteo Regional Adapter (`backend/adapters/openmeteo.py`)\n\nMonitors 10 strategic geographic hubs across Tamil Nadu & Puducherry:\n1. `OM-CHENNAI-01`: Chennai Central (Lat: 13.0827, Lon: 80.2707)\n2. `OM-PONDY-01`: Puducherry Town (Lat: 11.9416, Lon: 79.8083)\n3. `OM-MADURAI-01`: Madurai Central (Lat: 9.9252, Lon: 78.1198)\n4. `OM-COIMBAT-01`: Coimbatore City (Lat: 11.0168, Lon: 76.9558)\n5. `OM-TIRUCHI-01`: Tiruchirappalli City (Lat: 10.7905, Lon: 78.7047)\n6. `OM-SALEM-01`: Salem City (Lat: 11.6643, Lon: 78.1460)\n7. `OM-VELLORE-01`: Vellore City (Lat: 12.9165, Lon: 79.1325)\n8. `OM-TIRUNELV-01`: Tirunelveli City (Lat: 8.7139, Lon: 77.7567)\n9. `OM-THOOTHU-01`: Thoothukudi Port (Lat: 8.7642, Lon: 78.1348)\n10. `OM-CUDDALO-01`: Cuddalore Town (Lat: 11.7480, Lon: 79.7714)",
+      "norm_label": "open-meteo regional adapter (adapters/openmeteo.py)",
+      "file_path": "backend/adapters/openmeteo.py"
+    },
+    {
+      "id": "adapter_imd_aws",
+      "label": "IMD AWS Adapter Stub (adapters/imd.py)",
+      "type": "api_adapter",
+      "community": 5,
+      "community_name": "Data Adapters & Weather Station Network",
+      "summary": "Government India Meteorological Department AWS adapter stub ready for official token integration.",
+      "body": "# IMD AWS Adapter Stub (`backend/adapters/imd.py`)\n\nProvides clean interface adherence for official IMD Automatic Weather Station data feeds:\n- Prepared with target endpoints for regional IMD radar composites and Chennai Meenambakkam AWS.\n- Configured with graceful exception handling and informative status flags awaiting government API token activation.",
+      "norm_label": "imd aws adapter stub (adapters/imd.py)",
+      "file_path": "backend/adapters/imd.py"
+    },
+    {
+      "id": "ml_pipeline_overview",
+      "label": "Machine Learning Pipeline Architecture Overview",
+      "type": "ml_overview",
+      "community": 6,
+      "community_name": "Deep Learning Nowcasting Engine",
+      "summary": "PyTorch-based ML pipeline implementing base paper LSTMAtU-Net, proposed TransAtU-Net, and inference services.",
+      "body": "# ML Pipeline Architecture (`ml-pipeline/src`)\n\nThe machine learning directory contains standalone PyTorch architectures, loss modules, and real-time inference services:\n- `ecsa.py`: Efficient Channel and Space Attention module.\n- `lstmatu_net.py`: Base paper LSTMAtU-Net with DSC and ConvLSTM-VF.\n- `transformer_nowcast.py`: Novel TransAtU-Net with Spatio-Temporal Multi-Head Attention.\n- `loss.py`: Base paper TLoss and Enhanced Focal Loss.\n- `metrics.py`: CSI, POD, FAR, HSS, MAE, RMSE evaluation.\n- `nowcast_service.py`: Real-time multi-horizon inference service.\n- `feature_engineering.py`: Barometric tendency and humidity gradients.\n- `verify_models.py`: Sanity checking tensor shapes and forward passes.",
+      "norm_label": "machine learning pipeline architecture overview",
+      "file_path": "ml-pipeline/src"
+    },
+    {
+      "id": "ml_ecsa_module_code",
+      "label": "ECSA Module PyTorch Implementation (ecsa.py)",
+      "type": "ml_code",
+      "community": 6,
+      "community_name": "Deep Learning Nowcasting Engine",
+      "summary": "PyTorch module for Efficient Channel and Space Attention with multi-scale Adaptive Average Pooling.",
+      "body": "# ECSA Module Implementation (`ml-pipeline/src/ecsa.py`)\n\n```python\nclass ECSAModule(nn.Module):\n    def __init__(self, channels: int, spatial_scale: int = 4, kernel_size: int = 3):\n        super().__init__()\n        self.spatial_scale = spatial_scale\n        self.aap = nn.AdaptiveAvgPool2d((spatial_scale, spatial_scale))\n        self.conv1d = nn.Conv1d(\n            in_channels=1, out_channels=1,\n            kernel_size=kernel_size,\n            padding=(kernel_size - 1) // 2, bias=False\n        )\n        self.sigmoid = nn.Sigmoid()\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n        b, c, h, w = x.shape\n        pooled = self.aap(x)\n        channel_desc = pooled.mean(dim=(-2, -1))\n        ch_in = channel_desc.unsqueeze(1)\n        ch_weight = self.sigmoid(self.conv1d(ch_in))\n        scale = ch_weight.squeeze(1).unsqueeze(-1).unsqueeze(-1)\n        return x * scale\n```",
+      "norm_label": "ecsa module pytorch implementation (ecsa.py)",
+      "file_path": "ml-pipeline/src/ecsa.py"
+    },
+    {
+      "id": "ml_lstmatu_net_code",
+      "label": "LSTMAtU-Net PyTorch Implementation (lstmatu_net.py)",
+      "type": "ml_code",
+      "community": 6,
+      "community_name": "Deep Learning Nowcasting Engine",
+      "summary": "Complete PyTorch implementation of the base paper LSTMAtU-Net with DSC, ConvLSTM-VF, and ECSA.",
+      "body": "# LSTMAtU-Net PyTorch Implementation (`ml-pipeline/src/lstmatu_net.py`)\n\nIncludes:\n- `DepthwiseSeparableConv`: 3x3 depthwise convolution + 1x1 pointwise projection + BatchNorm + ReLU.\n- `DoubleDSCBlock`: Stacked dual DSC layers.\n- `VerticalConvLSTMCell`: ConvLSTM cell passing spatial-temporal memory $M$ and hidden state $H$ vertically across network layers.\n- `LSTMAtUNet`: Complete 4-level U-Net encoder-decoder network integrating ECSA modules on all skip connections.",
+      "norm_label": "lstmatu-net pytorch implementation (lstmatu_net.py)",
+      "file_path": "ml-pipeline/src/lstmatu_net.py"
+    },
+    {
+      "id": "ml_transformer_code",
+      "label": "TransAtU-Net Transformer Implementation (transformer_nowcast.py)",
+      "type": "ml_code",
+      "community": 6,
+      "community_name": "Deep Learning Nowcasting Engine",
+      "summary": "Novel proposed TransAtU-Net with Spatio-Temporal Multi-Head Self-Attention bottleneck.",
+      "body": "# TransAtU-Net Implementation (`ml-pipeline/src/transformer_nowcast.py`)\n\nIncludes:\n- `SpatioTemporalAttentionBlock`: Multi-Head Attention (8 heads, $D=256$) over flattened space-time tokens.\n- `Multi-Lead Positional Encodings`: Sinusoidal temporal encodings for +15m to +120m forecast horizons.\n- Direct $O(1)$ token interaction preventing recurrent blur and memory decay over long horizons.",
+      "norm_label": "transatu-net transformer implementation (transformer_nowcast.py)",
+      "file_path": "ml-pipeline/src/transformer_nowcast.py"
+    },
+    {
+      "id": "ml_loss_code",
+      "label": "Multi-Objective Loss Functions (loss.py)",
+      "type": "ml_code",
+      "community": 6,
+      "community_name": "Deep Learning Nowcasting Engine",
+      "summary": "PyTorch implementations of BasePaperTLoss (WMSE + soft BCE) and EnhancedTransformerLoss.",
+      "body": "# Loss Functions (`ml-pipeline/src/loss.py`)\n\n- `BasePaperTLoss`: Equation 5 from Sensors 2023 combining Weighted MSE ($e^{0.6y} - 0.8$) and multi-threshold soft BCE ($p \\in \\{0.05, 0.5, 1.0\\}\\text{ mm}$).\n- `EnhancedTransformerLoss`: Adds focal modulating factors and severe precipitation boundary weighting.",
+      "norm_label": "multi-objective loss functions (loss.py)",
+      "file_path": "ml-pipeline/src/loss.py"
+    },
+    {
+      "id": "ml_metrics_code",
+      "label": "Meteorological Metrics Evaluator (metrics.py)",
+      "type": "ml_code",
+      "community": 6,
+      "community_name": "Deep Learning Nowcasting Engine",
+      "summary": "Evaluates contingency tables and computes CSI, POD, FAR, HSS, MAE, and RMSE.",
+      "body": "# Meteorological Metrics Evaluator (`ml-pipeline/src/metrics.py`)\n\n- `compute_contingency_table(y_pred, y_true, threshold)`: Computes TP, FP, FN, TN.\n- `evaluate_precipitation_metrics()`: Calculates CSI, POD, FAR, HSS, MAE, and RMSE across customizable precipitation thresholds ($0.05, 0.2, 0.5, 1.0\\text{ mm}$).",
+      "norm_label": "meteorological metrics evaluator (metrics.py)",
+      "file_path": "ml-pipeline/src/metrics.py"
+    },
+    {
+      "id": "ml_nowcast_service",
+      "label": "Inference Service: HyperlocalNowcaster (nowcast_service.py)",
+      "type": "ml_service",
+      "community": 6,
+      "community_name": "Deep Learning Nowcasting Engine",
+      "summary": "Production inference wrapper generating multi-horizon predictions with atmospheric physics fallbacks.",
+      "body": "# HyperlocalNowcaster (`ml-pipeline/src/nowcast_service.py`)\n\n- Manages model weights and inference execution for `transatunet`, `lstmatunet`, and `convlstm`.\n- Generates 6 discrete forecast horizons: +15m, +30m, +45m, +60m, +90m, +120m.\n- Implements atmospheric thermodynamics heuristics (barometric tendencies and humidity gradients) as a robust fallback if deep learning weights are uncalibrated.",
+      "norm_label": "inference service: hyperlocalnowcaster (nowcast_service.py)",
+      "file_path": "ml-pipeline/src/nowcast_service.py"
+    },
+    {
+      "id": "ml_feature_engineering_code",
+      "label": "Feature Engineering Module (feature_engineering.py)",
+      "type": "ml_features",
+      "community": 6,
+      "community_name": "Deep Learning Nowcasting Engine",
+      "summary": "Computes pressure drop rate, humidity gradient, and dew-point depression.",
+      "body": "# Feature Engineering (`ml-pipeline/src/feature_engineering.py`)\n\nExtracts thermodynamic predictors:\n- $\\Delta P_{1h} = P_t - P_{t-1h}$ (Barometric tendency)\n- $\\Delta RH_{1h} = RH_t - RH_{t-1h}$ (Moisture advection rate)\n- $T - T_d$ (Dew point depression / air saturation deficit via Magnus-Tetens formula)",
+      "norm_label": "feature engineering module (feature_engineering.py)",
+      "file_path": "ml-pipeline/src/feature_engineering.py"
+    },
+    {
+      "id": "frontend_root_layout",
+      "label": "Next.js 16 Root Layout & Design Tokens (layout.tsx & globals.css)",
+      "type": "frontend_core",
+      "community": 7,
+      "community_name": "Frontend Meteorological Dashboard",
+      "summary": "Next.js 16 App Router root layout, fonts, and ocean-teal meteorological design system.",
+      "body": "# Root Layout & Design System (`web-app/src/app/layout.tsx`)\n\n- Enforces dark mode styling with Inter and JetBrains Mono typography.\n- Global navigation bar linking Home, Dashboard, Forecast, and Blog.\n- Bespoke meteorological CSS variables (`--deep-blue`, `--teal`, `--midnight`, `--surface`, `--accent-rain`).",
+      "norm_label": "next.js 16 root layout & design tokens (layout.tsx & globals.css)",
+      "file_path": "web-app/src/app/layout.tsx"
+    },
+    {
+      "id": "frontend_page_home",
+      "label": "Platform Homepage (page.tsx)",
+      "type": "frontend_page",
+      "community": 7,
+      "community_name": "Frontend Meteorological Dashboard",
+      "summary": "Interactive hero section with animated weather particles, live platform stats, and architecture cards.",
+      "body": "# Platform Homepage (`web-app/src/app/page.tsx`)\n\n- Dynamic Hero section with radar-style pulse animations.\n- Live telemetry counters (active stations, total readings, regional average temp/humidity).\n- 3-tier architecture breakdown explaining Data Ingestion, Deep Learning Nowcasting, and NWP Blending.\n- Direct navigation links to the Dashboard and AI Forecast center.",
+      "norm_label": "platform homepage (page.tsx)",
+      "file_path": "web-app/src/app/page.tsx"
+    },
+    {
+      "id": "frontend_page_dashboard",
+      "label": "Live Dashboard Operations Page (dashboard/page.tsx)",
+      "type": "frontend_page",
+      "community": 7,
+      "community_name": "Frontend Meteorological Dashboard",
+      "summary": "Real-time operations center with live station card grid, search filters, and 24h interactive trend charts.",
+      "body": "# Dashboard Operations Page (`web-app/src/app/dashboard/page.tsx`)\n\n- Real-time station card grid showing Puducherry PWS and Tamil Nadu urban stations.\n- 30-second automated polling with live status pulse.\n- District and city search filter.\n- Interactive Recharts 24h trend chart with toggles for Temperature, Humidity, Rainfall, and Pressure.",
+      "norm_label": "live dashboard operations page (dashboard/page.tsx)",
+      "file_path": "web-app/src/app/dashboard/page.tsx"
+    },
+    {
+      "id": "frontend_page_forecast",
+      "label": "Deep Learning Forecast Page (forecast/page.tsx)",
+      "type": "frontend_page",
+      "community": 7,
+      "community_name": "Frontend Meteorological Dashboard",
+      "summary": "Interactive AI nowcast interface: model switcher, 15m-120m lead time curves, and architecture visualizer.",
+      "body": "# AI Forecast Page (`web-app/src/app/forecast/page.tsx`)\n\nA 43KB comprehensive deep learning interface with 3 tabs:\n1. **Forecast Tab**: Model switcher (`TransAtU-Net` vs `LSTMAtU-Net`), station dropdown, multi-horizon (+15m to +120m) probability and intensity area chart, confidence rating gauge.\n2. **Architecture Tab**: Interactive schematics detailing DSC, ECSA, ConvLSTM-VF, and ST-MHSA.\n3. **Benchmarks Tab**: Comprehensive evaluation matrix comparing CSI, POD, FAR, and HSS across forecast lead times.",
+      "norm_label": "deep learning forecast page (forecast/page.tsx)",
+      "file_path": "web-app/src/app/forecast/page.tsx"
+    },
+    {
+      "id": "frontend_component_rainfall_map",
+      "label": "ToggleRainfallMap Component (ToggleRainfallMap.tsx)",
+      "type": "frontend_component",
+      "community": 7,
+      "community_name": "Frontend Meteorological Dashboard",
+      "summary": "Interactive ChennaiRains replica: 5-model weighted blend map across 20 Tamil Nadu & Puducherry districts.",
+      "body": "# ToggleRainfallMap (`web-app/src/components/ToggleRainfallMap.tsx`)\n\n- 5-Model weight sliders: ECMWF (35%), GFS (25%), ICON (20%), NCUM (10%), AI (10%).\n- 5-Day synoptic outlook selector tabs.\n- Color-coded IMD rainfall scale (Light, Moderate, Heavy, Very Heavy, Extremely Heavy, Torrential).\n- District inspector modal displaying individual model predictions for any selected district.",
+      "norm_label": "togglerainfallmap component (togglerainfallmap.tsx)",
+      "file_path": "web-app/src/components/ToggleRainfallMap.tsx"
+    },
+    {
+      "id": "frontend_component_trend_chart",
+      "label": "TrendChart Component (TrendChart.tsx)",
+      "type": "frontend_component",
+      "community": 7,
+      "community_name": "Frontend Meteorological Dashboard",
+      "summary": "Recharts-based time-series chart rendering 24-48h historical telemetry curves.",
+      "body": "# TrendChart Component (`web-app/src/components/TrendChart.tsx`)\n\n- Smooth spline area curves with custom linear gradients.\n- Metric toggles for Temperature (°C), Humidity (%), Rainfall (mm), and Pressure (hPa).\n- Interactive tooltip with exact timestamps and formatted values.",
+      "norm_label": "trendchart component (trendchart.tsx)",
+      "file_path": "web-app/src/components/TrendChart.tsx"
+    },
+    {
+      "id": "frontend_component_station_card",
+      "label": "StationCard Component (StationCard.tsx)",
+      "type": "frontend_component",
+      "community": 7,
+      "community_name": "Frontend Meteorological Dashboard",
+      "summary": "Glassmorphism weather station card with animated icons, status badges, and source labels.",
+      "body": "# StationCard Component (`web-app/src/components/StationCard.tsx`)\n\n- Glassmorphism backdrop-blur panel styling.\n- Displays Temperature, Humidity, Pressure, Rain, Wind speed.\n- Dynamic data source indicator badge (`Ambient PWS` vs `Open-Meteo`).\n- Active selection highlight linking the card to the primary trend chart.",
+      "norm_label": "stationcard component (stationcard.tsx)",
+      "file_path": "web-app/src/components/StationCard.tsx"
+    },
+    {
+      "id": "frontend_lib_api_client",
+      "label": "Typed API Client & Types (lib/api.ts & lib/types.ts)",
+      "type": "frontend_lib",
+      "community": 7,
+      "community_name": "Frontend Meteorological Dashboard",
+      "summary": "Type-safe TypeScript API client handling asynchronous backend communication.",
+      "body": "# API Client & Type Definitions (`web-app/src/lib/api.ts`)\n\n- `fetchStations()`: Queries `/api/stations`.\n- `fetchOverview()`: Queries `/api/overview`.\n- `fetchReadings(stationId, hours)`: Queries `/api/stations/{id}/readings`.\n- `fetchNowcastModels()`: Queries `/api/nowcast/models`.\n- `fetchNowcastPredictions(modelType)`: Queries `/api/nowcast/predict`.\n- `fetchRainfallBlend(day, weights)`: Queries `/api/forecast/rainfall-blend`.",
+      "norm_label": "typed api client & types (lib/api.ts & lib/types.ts)",
+      "file_path": "web-app/src/lib/api.ts"
+    },
+    {
+      "id": "nwp_blend_algorithm",
+      "label": "Multi-Model NWP Ensemble Blending Engine",
+      "type": "nwp_blend",
+      "community": 8,
+      "community_name": "NWP Multi-Model Blend Guidance",
+      "summary": "Mathematical ensemble blending ECMWF, GFS, ICON, NCUM, and AI nowcaster across 20 districts.",
+      "body": "# Multi-Model NWP Ensemble Blending Engine\n\n## Objective:\nCombines global NWP models with our AI nowcaster to generate calibrated 24-hour rainfall accumulation maps across 20 districts:\n$$R_{\\text{blend}}(d) = w_{\\text{ecmwf}} R_{\\text{ecmwf}}(d) + w_{\\text{gfs}} R_{\\text{gfs}}(d) + w_{\\text{icon}} R_{\\text{icon}}(d) + w_{\\text{ncum}} R_{\\text{ncum}}(d) + w_{\\text{ai}} R_{\\text{ai}}(d)$$\nSubject to $\\sum w_m = 1.0$.\n\n## Regional District Coverage:\n- North Coastal TN: Chennai, Tiruvallur, Chengalpattu.\n- Central Coastal: Puducherry, Auroville, Cuddalore Port.\n- Delta Zone: Nagapattinam, Thanjavur, Trichy.\n- Inland & South TN: Kanchipuram, Villupuram, Madurai, Coimbatore, Salem, Vellore, Tirunelveli, Thoothukudi, Kanyakumari, Ramanathapuram, Nilgiris.",
+      "norm_label": "multi-model nwp ensemble blending engine",
+      "file_path": "backend/routers/weather.py"
+    },
+    {
+      "id": "ppt_slide_deck_outline",
+      "label": "Complete PPT Presentation Structure (19 Slides)",
+      "type": "presentation_deck",
+      "community": 9,
+      "community_name": "PPT Presentation & Review Decks",
+      "summary": "Slide-by-slide guide from Review 1 & 2 presentations ready for PPT preparation and speaker notes.",
+      "body": "# Complete PPT Presentation Slide Structure\n\nUse this exact structure for preparing project review slides:\n\n- **Slide 1: Title Slide**:\n  - Title: Multi-Source AI for Hyperlocal Rainfall Nowcasting.\n  - Team: Ariyan M (23UCS015), Bharath B (23UCS025), Hemnnath G (23UCS066).\n  - Guide: Dr. N. Danapaquiame, HOD/CSE, Sri Manakula Vinayagar Engineering College.\n- **Slide 2: Abstract**:\n  - Problem of coarse NWP models, flash downpours, need for 0-3h nowcasting, and multi-source fusion (IMD AWS + 6 PWS + ECMWF).\n- **Slide 3: Problem Statement**:\n  - Fragmented data sources, lack of high-resolution convective warning, urban flood vulnerability in coastal TN/Puducherry.\n- **Slide 4: Existing Systems & Limitations**:\n  - Comparison of IMD Mausam, Windy, PWS standalone networks, and radar nowcasting limitations.\n- **Slide 5: Proposed System Overview**:\n  - 3-Layer Solution: Layer 1 Observation (60s ingestion), Layer 2 Intelligence (AI Nowcasting), Layer 3 Presentation (Next.js Dashboard).\n- **Slide 6: System Architecture Diagram**:\n  - Data sources -> Adapters -> APScheduler -> SQLite/Postgres -> FastAPI REST API -> Next.js Frontend.\n- **Slide 7: Implementation Module 1 — Data Acquisition & Storage**:\n  - FastAPI backend at port 8000, 30s scheduler, 48h startup backfill, deduplication logic, SQLite database.\n- **Slide 8: Implementation Module 2 — Feature Engineering**:\n  - Pressure tendency ($\\Delta P_{1h}$), humidity gradients, dew point spread ($T - T_d$), inter-station spatial vectors.\n- **Slide 9: Implementation — Frontend Dashboard**:\n  - Glassmorphism station cards, live 30s polling, Recharts 24h trend curves, dark ocean-teal palette.\n- **Slide 10: Module 3 — AI/ML Nowcasting Engine (Phase 2 Roadmap)**:\n  - Baseline Random Forest/XGBoost -> LSTMAtU-Net base paper -> Proposed TransAtU-Net.\n- **Slide 11: Module 4 — NWP Processing & Interactive Map**:\n  - Multi-model rainfall blend (ECMWF, GFS, ICON, NCUM, AI) across 20 districts.\n- **Slide 12: Module 5 — Blog, Community & User Feedback**:\n  - Weather discussions, verified community observations, admin moderation.\n- **Slide 13: Progress Tracker & Deliverables Status**:\n  - Phase 1 Completed: Backend, Adapters, Ingestion, Database, Feature Engineering, Frontend Dashboard.\n  - Phase 2 Planned: Model training, full ECMWF GRIB2 ingestion, production containerization.\n- **Slides 14 & 15: Literature Survey (Parts 1 & 2)**:\n  - Detailed table: Shi et al. (ConvLSTM 2015, TrajGRU 2017), Ravuri et al. (DGMR 2021), Geng et al. (LSTMAtU-Net 2023).\n- **Slide 16: Scope & Objectives**:\n  - Regional focus on Puducherry & Tamil Nadu; 6 real PWS stations; 0–3h nowcasting horizon.\n- **Slide 17: Technology Stack**:\n  - FastAPI, PyTorch, Next.js 16, React 19, Tailwind CSS v4, SQLAlchemy, SQLite, Recharts.\n- **Slide 18: Conclusion & Next Steps**:\n  - Summary of Phase 1 deliverables and immediate Phase 2 training milestones.\n- **Slide 19: Key References**:\n  - Citations of Sensors 2023, NeurIPS, Nature, and WMO guidelines.",
+      "norm_label": "complete ppt presentation structure (19 slides)",
+      "file_path": "Hyperlocal_Rainfall_Nowcasting_FYP_2nd_Review_Phase1.pptx"
+    },
+    {
+      "id": "demo_walkthrough_guide",
+      "label": "Step-by-Step Live Demo Execution Guide",
+      "type": "demo_guide",
+      "community": 10,
+      "community_name": "Demo Walkthrough & Viva Voce Guide",
+      "summary": "Precise terminal commands, browser URLs, and talking points for conducting an A+ viva demonstration.",
+      "body": "# Step-by-Step Live Project Demonstration\n\nFollow these exact steps during your practical examination or project review:\n\n## Step 1: Start Backend API Server\nOpen PowerShell Terminal 1:\n```powershell\ncd d:\\FYP-1\\backend\nuvicorn main:app --reload --port 8000\n```\n- **What to point out in terminal**:\n  1. `🌧️ Hyperlocal Rainfall Nowcasting — Backend starting...`\n  2. `✅ Database tables ready`\n  3. `⏳ Backfilling 24-48h historical time-series telemetry...` (Highlight that it backfills history on boot so graphs are never empty!)\n  4. `⏰ High-frequency ingestion scheduled every 60 seconds`\n- **Verify in browser**:\n  - Open `http://localhost:8000/` (Show customized landing page with status badge).\n  - Open `http://localhost:8000/docs` (Show interactive Swagger UI with all 13 REST endpoints).\n\n## Step 2: Start Next.js Frontend\nOpen PowerShell Terminal 2:\n```powershell\ncd d:\\FYP-1\\web-app\nnpm run dev\n```\n- Open `http://localhost:3000` in Google Chrome.\n\n## Step 3: Showcase Homepage (`http://localhost:3000`)\n- **Talking Point**: \"Here is our root landing page featuring our ocean-teal meteorological design system, dynamic active station count, and the 3-tier architecture breakdown.\"\n- Click **\"Launch Live Dashboard\"**.\n\n## Step 4: Showcase Real-Time Operations Dashboard (`http://localhost:3000/dashboard`)\n- **Show Live Station Cards**:\n  - Point to real Puducherry/Auroville PWS stations: *Heritage Town (White Town)*, *Sarvamangalam (Irumbai)*, *Bommayapalayam (Coastal)*.\n  - Point to Tamil Nadu urban stations: *Chennai Central*, *Madurai*, *Coimbatore*.\n  - Explain live parameters: Temp, Humidity, Pressure, Rain, Wind.\n- **Demonstrate Interactive Trend Chart**:\n  - Click on **Heritage Town PWS**.\n  - Toggle between **Temperature**, **Humidity**, and **Rainfall** tabs.\n  - Explain: \"The chart renders continuous 24-hour historical curves retrieved directly from our async SQLite database.\"\n- **Show Live Polling**:\n  - Point to the pulse badge showing 30s auto-refresh, and click the manual refresh icon.\n\n## Step 5: Showcase Deep Learning Nowcasting (`http://localhost:3000/forecast`)\n- Navigate to `/forecast`.\n- **Demonstrate Model Switching**:\n  - Select **TransAtU-Net (Proposed Transformer + ECSA)**.\n  - Show the multi-horizon probability curve (+15m to +120m).\n  - Switch to **LSTMAtU-Net (Base Paper)** and explain the difference: \"Notice how TransAtU-Net maintains sharp confidence over 90-120 minutes because the Transformer self-attention avoids the recursive memory decay of ConvLSTM.\"\n- Click **Architecture Tab**:\n  - Show interactive modals for ECSA, DSC, and TLoss.\n- Click **Benchmarks Tab**:\n  - Show the CSI, POD, FAR comparison table.\n\n## Step 6: Showcase Multi-Model Rainfall Blend (`http://localhost:3000/blog` or Map)\n- Move the **ECMWF**, **GFS**, **ICON**, and **AI** sliders.\n- Explain: \"This replicates the ChennaiRains operational blend builder, allowing meteorologists to weight global NWP models with our local AI nowcaster across 20 districts.\"\n\n## Step 7: Database Verification (Behind the Scenes)\nOpen PowerShell:\n```powershell\npython -c \"import sqlite3; conn=sqlite3.connect('d:/FYP-1/backend/weather.db'); print('Total readings stored:', conn.execute('SELECT COUNT(*) FROM weather_readings').fetchone()[0])\"\n```\n- Shows hundreds/thousands of real persistent records.",
+      "norm_label": "step-by-step live demo execution guide",
+      "file_path": "d:/FYP-1/Project brief.md"
+    },
+    {
+      "id": "viva_qa_cheat_sheet",
+      "label": "Top 20 Viva Voce / Review Q&A Cheat Sheet",
+      "type": "viva_preparation",
+      "community": 10,
+      "community_name": "Demo Walkthrough & Viva Voce Guide",
+      "summary": "Comprehensive answers to the top 20 questions examiners ask about rainfall nowcasting, DL architectures, and systems.",
+      "body": "# Top 20 Viva Voce & Review Q&A Cheat Sheet\n\n### Q1: What is the core difference between Weather Forecasting and Precipitation Nowcasting?\n**Answer**: Weather forecasting predicts synoptic conditions (large-scale fronts, temperature, pressure) over 12 hours to 10 days using Numerical Weather Prediction (NWP) models at 10–25 km resolution. Precipitation Nowcasting specifically predicts the exact location, timing, and intensity of rainfall over the **immediate 0 to 2 or 3 hours** at **hyperlocal resolution (1 to 5 km)**.\n\n### Q2: Why is standard Mean Squared Error (MSE) ineffective for training rainfall nowcasting models?\n**Answer**: Rainfall data suffers from **extreme class imbalance**; over 90% of timestamps in any given season have 0 mm of precipitation. If trained with standard MSE, a neural network minimizes loss by predicting near-zero or blurred mean values everywhere, completely failing to detect heavy localized downpours. We solve this by using the base paper's **TLoss**, which introduces an exponential weighting penalty ($e^{0.6y} - 0.8$) and soft Binary Cross-Entropy at meteorological thresholds (0.05, 0.5, 1.0 mm).\n\n### Q3: How do Depthwise Separable Convolutions (DSC) benefit this project?\n**Answer**: Standard 2D convolution applies kernels across spatial and channel dimensions simultaneously, requiring $K \\times K \\times C_{\\text{in}} \\times C_{\\text{out}}$ parameters. DSC splits this into depthwise (spatial filtering per channel, $K^2 C_{\\text{in}}$) and pointwise ($1 \\times 1$ linear projection, $C_{\\text{in}} C_{\\text{out}}$). In LSTMAtU-Net, this cuts parameters by **41.86%** (from 32M down to 18.6M) with virtually zero drop in accuracy, allowing rapid inference within 20 milliseconds.\n\n### Q4: What is the Efficient Channel and Space Attention (ECSA) module?\n**Answer**: Standard Efficient Channel Attention (ECA) uses Global Average Pooling (GAP) down to $1 \\times 1$, which obliterates spatial rain cell boundaries. ECSA replaces GAP with **Adaptive Average Pooling (AAP)** to a multi-scale $R \\times R$ grid ($R \\in \\{16, 8, 4, 2, 1\\}$), followed by a 1D convolution ($k=3$) along channels. This preserves spatial structural features across U-Net skip connections while adaptively weighting channel dependencies.\n\n### Q5: What is your novel contribution beyond the base paper?\n**Answer**: The base paper (*Sensors 2023*) explicitly stated in its conclusion that future work must explore the **Transformer architecture and weighted loss**. We fulfilled this by designing **TransAtU-Net**, which replaces the sequential ConvLSTM bottleneck with **Spatio-Temporal Multi-Head Self-Attention (ST-MHSA)**. This eliminates recurrent memory decay and blur over 90–120 minute horizons. Furthermore, we built a complete end-to-end full-stack platform integrating real PWS stations in Puducherry and multi-model NWP blending.\n\n### Q6: How do you handle missing or delayed data from community PWS stations?\n**Answer**: In our adapter layer, we employ non-blocking asynchronous HTTP timeouts. If a station misses an ingestion cycle, our deduplication and time-alignment logic flags it without halting the pipeline. For nowcasting inference, the model utilizes historical window buffers and spatial correlation with nearest neighboring stations to impute missing inputs.\n\n### Q7: Why use SQLite in Phase 1 and PostgreSQL/TimescaleDB in Phase 2?\n**Answer**: SQLite with `aiosqlite` is serverless, zero-configuration, and self-contained in a single portable file (`weather.db`), making it ideal for local testing, rapid feature engineering, and offline examiner demos. In Phase 2, because our database schema is built using SQLAlchemy Async ORM, switching to PostgreSQL with TimescaleDB hypertables requires only updating the `DATABASE_URL` environment variable without changing any application code.\n\n### Q8: What is Vertical Flow ConvLSTM (ConvLSTM-VF)?\n**Answer**: Standard ConvLSTM connects hidden states horizontally across temporal steps. ConvLSTM-VF rotates the recurrent cell 90 degrees clockwise so spatial-temporal memory $M^l$ and hidden state $H^l$ pass vertically across network abstraction layers $l$ of the U-Net. This allows low-level texture features from early encoder layers to dynamically enrich high-level semantic features before decoding.\n\n### Q9: How do you evaluate Quantitative Precipitation Forecasting (QPF)?\n**Answer**: We use the World Meteorological Organization standard contingency metrics: Critical Success Index (CSI), Probability of Detection (POD), False Alarm Rate (FAR), and Heidke Skill Score (HSS) evaluated at discrete rainfall thresholds ($0.05, 0.2, 0.5, 1.0\\text{ mm}$), alongside MAE and RMSE.\n\n### Q10: What is the Magnus-Tetens formula and why is it used?\n**Answer**: It calculates the dew point temperature $T_d$ from dry-bulb temperature and relative humidity:\n$T_d = \\frac{b \\cdot \\alpha(T, RH)}{a - \\alpha(T, RH)}$ with $a = 17.27, b = 237.7^\\circ\\text{C}$.\nThe difference $T - T_d$ (dew point spread) measures atmospheric saturation deficit; when it nears $0^\\circ\\text{C}$, precipitation is imminent.\n\n### Q11: How does the startup backfill work?\n**Answer**: On server startup, `backfill_history()` queries Open-Meteo and Ambient PWS for 24 to 48 hours of historical hourly telemetry, storing it in SQLite before the live scheduler begins. This guarantees that user graphs and trend charts render complete curves even immediately after booting.\n\n### Q12: How is deduplication enforced?\n**Answer**: The ingestion service queries `_reading_exists(station_id, timestamp)` before each insert, enforcing compound uniqueness and avoiding duplicate rows if the scheduler polls more frequently than the station reporting rate.\n\n### Q13: What are the 5 models used in the ChennaiRains rainfall blend?\n**Answer**: ECMWF (35%), GFS (25%), ICON (20%), NCUM (10%), and AI TransAtU-Net (10%).\n\n### Q14: How does TransAtU-Net handle lead times?\n**Answer**: It injects multi-lead temporal sinusoidal positional encodings directly into the token sequence, allowing the model to project cloud motion and intensity concurrently at +15m, +30m, +45m, +60m, +90m, and +120m.\n\n### Q15: Why is Next.js 16 with App Router used?\n**Answer**: Next.js 16 provides server-side rendering, streaming SSR, fast Turbopack compilation, and type-safe routing. It allows real-time interactive components (`use client`) to coexist with SEO-friendly pages.\n\n### Q16: How many stations are actively monitored?\n**Answer**: 16 stations: 6 real Personal Weather Stations in Puducherry and Auroville (Sarvamangalam, Auro Orchard, Heritage Town, Marie Oulgaret, Bommayapalayam, Auroville Central) and 10 regional Open-Meteo urban stations across Tamil Nadu.\n\n### Q17: What is the average response time of the REST API?\n**Answer**: Measured empirically in Phase 1: `/api/overview` responds in 18.4 ms, `/api/stations` in 34.7 ms, and historical time-series queries in 38–45 ms.\n\n### Q18: What is the role of APScheduler?\n**Answer**: It runs an in-process `AsyncIOScheduler` inside FastAPI, triggering `run_ingestion()` every 60 seconds without requiring external dependencies like Celery, RabbitMQ, or Redis.\n\n### Q19: What is the difference between POD and CSI?\n**Answer**: POD (Hit Rate) measures what fraction of actual rain was detected ($\\text{TP}/(\\text{TP}+\\text{FN})$), but can be artificially inflated by always predicting rain. CSI ($\\text{TP}/(\\text{TP}+\\text{FP}+\\text{FN})$) penalizes both false alarms and misses, giving a true measure of nowcast skill.\n\n### Q20: What is planned for Phase 2?\n**Answer**:\n1. Full model training on multi-season historical radar and station data.\n2. Direct GRIB2 parsing from ECMWF Open Data using `cfgrib` and `xarray`.\n3. User authentication via NextAuth.js and community weather discussion boards.\n4. Containerized production deployment on cloud infrastructure with TimescaleDB.",
+      "norm_label": "top 20 viva voce / review q&a cheat sheet",
+      "file_path": "Bharath B - FYP Report.docx"
+    }
+  ],
+  "links": [
+    {
+      "source": "project_academic_meta",
+      "target": "po_pso_curriculum_mapping",
+      "relation": "aligns_with",
+      "label": "Satisfies ABET/NBA Criteria",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "project_academic_meta",
+      "target": "system_specifications_hardware_software",
+      "relation": "specifies_requirements",
+      "label": "Chapter 4 Requirements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "project_academic_meta",
+      "target": "problem_statement_and_motivation",
+      "relation": "solves_problem",
+      "label": "Target Problem Definition",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "problem_statement_and_motivation",
+      "target": "literature_survey_benchmark",
+      "relation": "analyzes_prior_art",
+      "label": "16 Survey Papers",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "literature_survey_benchmark",
+      "target": "base_paper_deep_dive",
+      "relation": "selects_foundation",
+      "label": "Paper #4: Sensors 2023",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "base_paper_deep_dive",
+      "target": "proposed_transatunet_novelty",
+      "relation": "proposes_extension",
+      "label": "Fulfills Future Research Direction",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "base_paper_deep_dive",
+      "target": "math_ecsa_formulation",
+      "relation": "defines",
+      "label": "Formulates ECSA Module",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "base_paper_deep_dive",
+      "target": "math_dsc_convolutions",
+      "relation": "defines",
+      "label": "Formulates DSC Convolutions",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "base_paper_deep_dive",
+      "target": "math_loss_functions",
+      "relation": "defines",
+      "label": "Formulates Base TLoss",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "base_paper_deep_dive",
+      "target": "math_meteorological_metrics",
+      "relation": "evaluates_with",
+      "label": "CSI, POD, FAR, HSS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "proposed_transatunet_novelty",
+      "target": "math_ecsa_formulation",
+      "relation": "incorporates",
+      "label": "Applies ECSA on Skips",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "proposed_transatunet_novelty",
+      "target": "math_loss_functions",
+      "relation": "enhances",
+      "label": "Focal Weighted CSI Loss",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "implementation_15_steps_lifecycle",
+      "target": "empirical_evaluation_results",
+      "relation": "produces_results",
+      "label": "43-Day Validation Results",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "implementation_15_steps_lifecycle",
+      "target": "backend_main_service",
+      "relation": "implements_steps",
+      "label": "Steps 1-5: Backend & DB",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "implementation_15_steps_lifecycle",
+      "target": "ml_pipeline_overview",
+      "relation": "implements_steps",
+      "label": "Steps 8-10: ML Nowcasting",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "implementation_15_steps_lifecycle",
+      "target": "frontend_page_dashboard",
+      "relation": "implements_steps",
+      "label": "Steps 13-14: Dashboard UI",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_pipeline_overview",
+      "target": "ml_ecsa_module_code",
+      "relation": "contains",
+      "label": "ecsa.py",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_pipeline_overview",
+      "target": "ml_lstmatu_net_code",
+      "relation": "contains",
+      "label": "lstmatu_net.py",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_pipeline_overview",
+      "target": "ml_transformer_code",
+      "relation": "contains",
+      "label": "transformer_nowcast.py",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_pipeline_overview",
+      "target": "ml_loss_code",
+      "relation": "contains",
+      "label": "loss.py",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_pipeline_overview",
+      "target": "ml_metrics_code",
+      "relation": "contains",
+      "label": "metrics.py",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_pipeline_overview",
+      "target": "ml_nowcast_service",
+      "relation": "contains",
+      "label": "nowcast_service.py",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_pipeline_overview",
+      "target": "ml_feature_engineering_code",
+      "relation": "contains",
+      "label": "feature_engineering.py",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_lstmatu_net_code",
+      "target": "ml_ecsa_module_code",
+      "relation": "imports",
+      "label": "Uses ECSAModule in Skips",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_transformer_code",
+      "target": "ml_ecsa_module_code",
+      "relation": "imports",
+      "label": "Uses ECSAModule in Skips",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_nowcast_service",
+      "target": "ml_transformer_code",
+      "relation": "runs_inference_on",
+      "label": "TransAtU-Net Inference",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ml_nowcast_service",
+      "target": "ml_lstmatu_net_code",
+      "relation": "runs_inference_on",
+      "label": "LSTMAtU-Net Inference",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_service",
+      "target": "backend_config_service",
+      "relation": "loads_config",
+      "label": "Reads Settings",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_service",
+      "target": "backend_database_engine",
+      "relation": "initializes",
+      "label": "Runs create_tables()",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_service",
+      "target": "backend_ingestion_engine",
+      "relation": "schedules",
+      "label": "Runs APScheduler (60s)",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_service",
+      "target": "backend_weather_router",
+      "relation": "mounts_router",
+      "label": "Mounts /api Endpoints",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_database_engine",
+      "target": "backend_orm_models",
+      "relation": "manages_tables",
+      "label": "Station, Reading, Nowcast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_weather_router",
+      "target": "backend_schemas_validation",
+      "relation": "validates_with",
+      "label": "Pydantic Schemas",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_ingestion_engine",
+      "target": "backend_orm_models",
+      "relation": "persists_to",
+      "label": "Stores WeatherReadings",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_ingestion_engine",
+      "target": "adapter_base_interface",
+      "relation": "calls_adapters",
+      "label": "Polls All Active Adapters",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "adapter_base_interface",
+      "target": "adapter_ambient_pws",
+      "relation": "implemented_by",
+      "label": "Ambient PWS Adapter",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "adapter_base_interface",
+      "target": "adapter_openmeteo",
+      "relation": "implemented_by",
+      "label": "Open-Meteo Adapter",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "adapter_base_interface",
+      "target": "adapter_imd_aws",
+      "relation": "implemented_by",
+      "label": "IMD AWS Adapter",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_weather_router",
+      "target": "ml_nowcast_service",
+      "relation": "invokes",
+      "label": "Calls HyperlocalNowcaster",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "backend_weather_router",
+      "target": "nwp_blend_algorithm",
+      "relation": "executes",
+      "label": "Calculates Rainfall Blend",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_root_layout",
+      "target": "frontend_page_home",
+      "relation": "wraps",
+      "label": "Root Layout for Home",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_root_layout",
+      "target": "frontend_page_dashboard",
+      "relation": "wraps",
+      "label": "Root Layout for Dashboard",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_root_layout",
+      "target": "frontend_page_forecast",
+      "relation": "wraps",
+      "label": "Root Layout for Forecast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_page_dashboard",
+      "target": "frontend_component_station_card",
+      "relation": "renders",
+      "label": "Station Cards Grid",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_page_dashboard",
+      "target": "frontend_component_trend_chart",
+      "relation": "renders",
+      "label": "24h Historical Telemetry Chart",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_page_forecast",
+      "target": "ml_nowcast_service",
+      "relation": "visualizes",
+      "label": "Multi-Horizon Nowcast Timeline",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_page_dashboard",
+      "target": "frontend_lib_api_client",
+      "relation": "calls",
+      "label": "api.ts",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_page_forecast",
+      "target": "frontend_lib_api_client",
+      "relation": "calls",
+      "label": "api.ts",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_component_rainfall_map",
+      "target": "frontend_lib_api_client",
+      "relation": "calls",
+      "label": "api.ts",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_lib_api_client",
+      "target": "backend_weather_router",
+      "relation": "queries_over_http",
+      "label": "HTTP REST API",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ppt_slide_deck_outline",
+      "target": "project_academic_meta",
+      "relation": "presents",
+      "label": "Slide 1 & 2: Team & Abstract",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ppt_slide_deck_outline",
+      "target": "problem_statement_and_motivation",
+      "relation": "presents",
+      "label": "Slide 3 & 4: Problem Statement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ppt_slide_deck_outline",
+      "target": "literature_survey_benchmark",
+      "relation": "presents",
+      "label": "Slide 14 & 15: 16 Papers Table",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ppt_slide_deck_outline",
+      "target": "base_paper_deep_dive",
+      "relation": "presents",
+      "label": "Slide 10 & 14: Base Paper Analysis",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ppt_slide_deck_outline",
+      "target": "proposed_transatunet_novelty",
+      "relation": "presents",
+      "label": "Slide 10 & 18: Proposed TransAtU-Net",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ppt_slide_deck_outline",
+      "target": "implementation_15_steps_lifecycle",
+      "relation": "presents",
+      "label": "Slide 7-9: Implementation Modules",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ppt_slide_deck_outline",
+      "target": "empirical_evaluation_results",
+      "relation": "presents",
+      "label": "Slide 13: Progress & Results",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "ppt_slide_deck_outline",
+      "target": "system_specifications_hardware_software",
+      "relation": "presents",
+      "label": "Slide 17: Tech Stack & Specs",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "demo_walkthrough_guide",
+      "target": "backend_main_service",
+      "relation": "executes",
+      "label": "Step 1: Start Backend (Port 8000)",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "demo_walkthrough_guide",
+      "target": "frontend_page_dashboard",
+      "relation": "executes",
+      "label": "Step 3: Demo Dashboard & Trends",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "demo_walkthrough_guide",
+      "target": "frontend_page_forecast",
+      "relation": "executes",
+      "label": "Step 4: Demo DL Nowcast Switching",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "demo_walkthrough_guide",
+      "target": "frontend_component_rainfall_map",
+      "relation": "executes",
+      "label": "Step 5: Demo Blend Sliders",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "viva_qa_cheat_sheet",
+      "target": "base_paper_deep_dive",
+      "relation": "defends",
+      "label": "Explains DSC, ECSA, ConvLSTM-VF",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "viva_qa_cheat_sheet",
+      "target": "proposed_transatunet_novelty",
+      "relation": "defends",
+      "label": "Defends Novel Transformer Choice",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "viva_qa_cheat_sheet",
+      "target": "math_loss_functions",
+      "relation": "defends",
+      "label": "Defends TLoss vs Standard MSE",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "source": "viva_qa_cheat_sheet",
+      "target": "empirical_evaluation_results",
+      "relation": "defends",
+      "label": "Defends 43-Day Ingestion & Latencies",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}
